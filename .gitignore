@@ -1,0 +1,9 @@
+bin/
+/.gradle/
+/.classpath
+/build/
+/uploadingDir
+/archivedDir
+/.project
+
+bin/main/*
