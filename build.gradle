@@ -1,0 +1,48 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.1'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
+}
+
+group = 'com.lp.graphql'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'mysql:mysql-connector-java'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.4.1'
+	// https://mvnrepository.com/artifact/org.modelmapper/modelmapper
+    compile group: 'org.modelmapper', name: 'modelmapper', version: '2.3.9'
+	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui
+    compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
+	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
+    compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+    // https://mvnrepository.com/artifact/com.graphql-java/graphql-spring-boot-starter
+    compile group: 'com.graphql-java', name: 'graphql-spring-boot-starter', version: '5.0.2'
+    // https://mvnrepository.com/artifact/com.graphql-java/graphql-java-tools
+    compile group: 'com.graphql-java', name: 'graphql-java-tools', version: '5.2.4'
+    // https://mvnrepository.com/artifact/com.graphql-java/graphiql-spring-boot-starter
+    compile group: 'com.graphql-java', name: 'graphiql-spring-boot-starter', version: '5.0.2'
+
+	
+}
+
+test {
+	useJUnitPlatform()
+}

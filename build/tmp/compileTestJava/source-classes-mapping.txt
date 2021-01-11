@@ -1,0 +1,2 @@
+com/lp/graphql/SpringBootGraphqlGradleApplicationTests.java
+ com.lp.graphql.SpringBootGraphqlGradleApplicationTests
